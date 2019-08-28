@@ -33,30 +33,11 @@ xui.Class('App', 'xui.Module',{
             
             host.panel_registe.append(
                 xui.create("xui.UI.Input")
-                .setHost(host,"input_name")
-                .setName("name")
-                .setRequired(true)
-                .setDirtyMark(false)
-                .setLeft("-0.5em")
-                .setTop("4.666666666666667em")
-                .setWidth("18em")
-                .setLabelSize("8em")
-                .setLabelCaption("姓名")
-                .setCustomStyle({
-                    "LABEL":{
-                        "color":"#FFFFFF"
-                    }
-                })
-            );
-            
-            host.panel_registe.append(
-                xui.create("xui.UI.Input")
                 .setHost(host,"input_age")
                 .setName("age")
-                .setRequired(true)
                 .setDirtyMark(false)
                 .setLeft("-0.5em")
-                .setTop("8em")
+                .setTop("7.166666666666667em")
                 .setWidth("18em")
                 .setLabelSize("8em")
                 .setLabelCaption("年龄")
@@ -65,20 +46,12 @@ xui.Class('App', 'xui.Module',{
             host.panel_registe.append(
                 xui.create("xui.UI.HTMLButton")
                 .setHost(host,"xui_ui_htmlbutton3")
-                .setLeft("8.75em")
-                .setTop("12.25em")
+                .setLeft("7.083333333333333em")
+                .setTop("11.416666666666666em")
                 .setWidth("8.583333333333334em")
                 .setHeight("2.4166666666666665em")
                 .setCaption("注册")
                 .onClick([
-                    {
-                        "desc":"表单验证",
-                        "type":"control",
-                        "target":"panel_registe",
-                        "args":[ ],
-                        "method":"checkValid",
-                        "event":1
-                    },
                     {
                         "desc":"赋值到全局变量",
                         "type":"control",
@@ -89,9 +62,21 @@ xui.Class('App', 'xui.Module',{
                             "from"
                         ],
                         "method":"getFormValues",
-                        "redirection":"other:callback:call"
+                        "redirection":"other:callback:call",
+                        "event":1
                     }
                 ])
+            );
+            
+            host.panel_registe.append(
+                xui.create("xui.UI.Input")
+                .setHost(host,"xui_ui_input27")
+                .setDirtyMark(false)
+                .setLeft("-0.5em")
+                .setTop("3.8333333333333335em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("姓名")
             );
             
             return children;
