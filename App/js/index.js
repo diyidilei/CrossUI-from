@@ -25,7 +25,7 @@ xui.Class('App', 'xui.Module',{
                 .setHost(host,"panel_registe")
                 .setDock("none")
                 .setLeft("13.333333333333334em")
-                .setTop("10.833333333333334em")
+                .setTop("9.166666666666666em")
                 .setWidth("25em")
                 .setHeight("22.5em")
                 .setCaption("注册")
@@ -37,11 +37,16 @@ xui.Class('App', 'xui.Module',{
                 .setName("name")
                 .setRequired(true)
                 .setDirtyMark(false)
-                .setLeft("0.3333333333333333em")
-                .setTop("3em")
+                .setLeft("-0.5em")
+                .setTop("4.666666666666667em")
                 .setWidth("18em")
                 .setLabelSize("8em")
                 .setLabelCaption("姓名")
+                .setCustomStyle({
+                    "LABEL":{
+                        "color":"#FFFFFF"
+                    }
+                })
             );
             
             host.panel_registe.append(
@@ -50,8 +55,8 @@ xui.Class('App', 'xui.Module',{
                 .setName("age")
                 .setRequired(true)
                 .setDirtyMark(false)
-                .setLeft("0.3333333333333333em")
-                .setTop("6.333333333333333em")
+                .setLeft("-0.5em")
+                .setTop("8em")
                 .setWidth("18em")
                 .setLabelSize("8em")
                 .setLabelCaption("年龄")
@@ -60,8 +65,8 @@ xui.Class('App', 'xui.Module',{
             host.panel_registe.append(
                 xui.create("xui.UI.HTMLButton")
                 .setHost(host,"xui_ui_htmlbutton3")
-                .setLeft("8.333333333333334em")
-                .setTop("10.833333333333334em")
+                .setLeft("8.75em")
+                .setTop("12.25em")
                 .setWidth("8.583333333333334em")
                 .setHeight("2.4166666666666665em")
                 .setCaption("注册")
