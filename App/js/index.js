@@ -60,7 +60,7 @@ xui.Class('App', 'xui.Module',{
                             "{page.functions.register}",
                             "none",
                             "",
-                            "{page.panel_registe.getRowMap()}"
+                            "{page.panel_registe.getFormValues()}"
                         ],
                         "method":"call",
                         "event":1
