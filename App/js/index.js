@@ -53,16 +53,16 @@ xui.Class('App', 'xui.Module',{
                 .setCaption("注册")
                 .onClick([
                     {
-                        "desc":"赋值到全局变量",
-                        "type":"control",
-                        "target":"panel_registe",
+                        "desc":"注冊",
+                        "type":"other",
+                        "target":"callback",
                         "args":[
-                            "{page.panel_registe.getFormValues()}",
-                            "global",
-                            "from"
+                            "{page.functions.register}",
+                            "none",
+                            "",
+                            "{page.panel_registe.getRowMap()}"
                         ],
-                        "method":"getFormValues",
-                        "redirection":"other:callback:call",
+                        "method":"call",
                         "event":1
                     }
                 ])
@@ -87,6 +87,23 @@ xui.Class('App', 'xui.Module',{
         customAppend : function(parent, subId, left, top){
             // "return false" will cause all the internal UI controls will be added to the parent panel
             return false;
+        },
+        functions:{
+            "register":{
+                "desc":"",
+                "params":[
+                    {
+                        "id":"data",
+                        "type":"Object",
+                        "desc":""
+                    }
+                ],
+                "actions":[
+                    function(data){
+                        window.parent.document.getElementById("login").contentWindow.drawMap(data)
+                    }
+                ]
+            }
         }
         /*,
         // To determine how properties affects this module
