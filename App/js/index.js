@@ -22,24 +22,69 @@ xui.Class('App', 'xui.Module',{
             
             append(
                 xui.create("xui.UI.Panel")
-                .setHost(host,"xui_ui_panel4")
+                .setHost(host,"panel_registe")
                 .setDock("none")
-                .setLeft("21.666666666666668em")
+                .setLeft("13.333333333333334em")
                 .setTop("10.833333333333334em")
                 .setWidth("25em")
                 .setHeight("22.5em")
-                .setCaption("注册提交")
+                .setCaption("注册")
             );
             
-            host.xui_ui_panel4.append(
+            host.panel_registe.append(
                 xui.create("xui.UI.Input")
-                .setHost(host,"xui_ui_input6")
+                .setHost(host,"input_name")
+                .setName("name")
                 .setDirtyMark(false)
                 .setLeft("0.3333333333333333em")
                 .setTop("3em")
                 .setWidth("18em")
                 .setLabelSize("8em")
-                .setLabelCaption("输入框")
+                .setLabelCaption("姓名")
+            );
+            
+            host.panel_registe.append(
+                xui.create("xui.UI.Input")
+                .setHost(host,"input_age")
+                .setName("age")
+                .setDirtyMark(false)
+                .setLeft("0.3333333333333333em")
+                .setTop("6.333333333333333em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("年龄")
+            );
+            
+            host.panel_registe.append(
+                xui.create("xui.UI.HTMLButton")
+                .setHost(host,"xui_ui_htmlbutton3")
+                .setLeft("8.333333333333334em")
+                .setTop("10.833333333333334em")
+                .setWidth("8.583333333333334em")
+                .setHeight("2.4166666666666665em")
+                .setCaption("注册")
+                .onClick([
+                    {
+                        "desc":"表单验证",
+                        "type":"control",
+                        "target":"panel_registe",
+                        "args":[ ],
+                        "method":"checkValid",
+                        "event":1
+                    },
+                    {
+                        "desc":"赋值到全局变量",
+                        "type":"control",
+                        "target":"panel_registe",
+                        "args":[
+                            "{page.panel_registe.getFormValues()}",
+                            "global",
+                            "from"
+                        ],
+                        "method":"getFormValues",
+                        "redirection":"other:callback:call"
+                    }
+                ])
             );
             
             return children;
