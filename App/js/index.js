@@ -64,13 +64,20 @@ xui.Class('App', 'xui.Module',{
                         ],
                         "method":"call",
                         "event":1
+                    },
+                    {
+                        "desc":"清空",
+                        "type":"control",
+                        "target":"panel_registe",
+                        "args":[ ],
+                        "method":"formClear"
                     }
                 ])
             );
             
             host.panel_registe.append(
                 xui.create("xui.UI.Input")
-                .setHost(host,"xui_ui_input27")
+                .setHost(host,"name")
                 .setDirtyMark(false)
                 .setLeft("-0.5em")
                 .setTop("3.8333333333333335em")
