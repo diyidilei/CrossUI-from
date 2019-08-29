@@ -110,6 +110,21 @@ xui.Class('App', 'xui.Module',{
                         window.parent.document.getElementById("login").contentWindow.drawMap(data)
                     }
                 ]
+            },
+            "setFrom":{
+                "desc":"",
+                "params":[
+                    {
+                        "id":"data",
+                        "type":"Object",
+                        "desc":""
+                    }
+                ],
+                "actions":[
+                    function(data){
+                        console.log(data)
+                    }
+                ]
             }
         }
         /*,
