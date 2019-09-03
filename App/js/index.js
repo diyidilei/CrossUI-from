@@ -63,7 +63,8 @@ xui.Class('App', 'xui.Module',{
                             "{page.panel_registe.getFormValues()}"
                         ],
                         "method":"call",
-                        "event":1
+                        "event":1,
+                        "return":false
                     },
                     {
                         "desc":"清空",
