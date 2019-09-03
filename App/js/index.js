@@ -72,6 +72,13 @@ xui.Class('App', 'xui.Module',{
                         "target":"panel_registe",
                         "args":[ ],
                         "method":"formClear"
+                    },
+                    {
+                        "desc":"条状",
+                        "type":"page",
+                        "target":"App.Name2",
+                        "args":[ ],
+                        "method":"show"
                     }
                 ])
             );
