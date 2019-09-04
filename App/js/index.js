@@ -72,7 +72,17 @@ xui.Class('App', 'xui.Module',{
                         "target":"panel_registe",
                         "args":[ ],
                         "method":"formClear"
-                    }
+                    },
+                    {
+                        "desc":"设置",
+                        "type":"control",
+                        "target":"panel_registe",
+                        "args":[
+                            "{page.panel_registe.getFormValues()}"
+                        ],
+                        "method":"setFormValues"
+                    },
+                    "_xui_ui_htmlbutton3_onclick"
                 ])
             );
             
@@ -128,6 +138,16 @@ xui.Class('App', 'xui.Module',{
                     }
                 ]
             }
+        },
+        /**
+         * 当鼠标单击时调用
+         * @method onClick [xui.UI.HTMLButton event]
+         * @param {xui.UIProfile} profile , 当前控件的配置对象(特征数据)
+         * @param {Event} e , DOM事件元素
+         * @param {String} src , 事件所属DOM元素的xid
+        */
+        _xui_ui_htmlbutton3_onclick:function(profile, e, src){
+            var ns = this, uictrl = profile.boxing();
         }
         /*,
         // To determine how properties affects this module
