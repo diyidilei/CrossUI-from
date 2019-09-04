@@ -78,7 +78,7 @@ xui.Class('App', 'xui.Module',{
                         "type":"control",
                         "target":"panel_registe",
                         "args":[
-                            "111"
+                            "{name:111}"
                         ],
                         "method":"setFormValues"
                     }
