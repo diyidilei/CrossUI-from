@@ -72,15 +72,6 @@ xui.Class('App', 'xui.Module',{
                         "target":"panel_registe",
                         "args":[ ],
                         "method":"formClear"
-                    },
-                    {
-                        "desc":"赋值",
-                        "type":"control",
-                        "target":"panel_registe",
-                        "args":[
-                            "{name:111}"
-                        ],
-                        "method":"setFormValues"
                     }
                 ])
             );
