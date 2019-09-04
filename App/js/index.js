@@ -123,7 +123,8 @@ xui.Class('App', 'xui.Module',{
                 ],
                 "actions":[
                     function(data){
-                        console.log(data)
+                        console.log(data);
+                        return data;
                     }
                 ]
             }
