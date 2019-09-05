@@ -217,6 +217,18 @@ xui.Class('App', 'xui.Module',{
                         "method":"setUIValue",
                         "redirection":"other:callback:call"
                     },
+                    {
+                        "desc":"添加表格",
+                        "type":"control",
+                        "target":"xui_ui_treegrid3",
+                        "args":[
+                            "{args[0]}",
+                            null,
+                            null,
+                            false
+                        ],
+                        "method":"insertRows"
+                    },
                     function(data){
                         console.log(data);
                     }
