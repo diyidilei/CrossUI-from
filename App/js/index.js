@@ -24,8 +24,8 @@ xui.Class('App', 'xui.Module',{
                 xui.create("xui.UI.Panel")
                 .setHost(host,"panel_registe")
                 .setDock("none")
-                .setLeft("13.333333333333334em")
-                .setTop("9.166666666666666em")
+                .setLeft("5.833333333333333em")
+                .setTop("4.166666666666667em")
                 .setWidth("25em")
                 .setHeight("22.5em")
                 .setCaption("注册")
@@ -33,7 +33,7 @@ xui.Class('App', 'xui.Module',{
             
             host.panel_registe.append(
                 xui.create("xui.UI.Input")
-                .setHost(host,"input_age")
+                .setHost(host,"age")
                 .setName("age")
                 .setDirtyMark(false)
                 .setLeft("-0.5em")
@@ -46,8 +46,8 @@ xui.Class('App', 'xui.Module',{
             host.panel_registe.append(
                 xui.create("xui.UI.HTMLButton")
                 .setHost(host,"xui_ui_htmlbutton3")
-                .setLeft("7.083333333333333em")
-                .setTop("11.416666666666666em")
+                .setLeft("7.916666666666667em")
+                .setTop("12.25em")
                 .setWidth("8.583333333333334em")
                 .setHeight("2.4166666666666665em")
                 .setCaption("注册")
@@ -95,6 +95,65 @@ xui.Class('App', 'xui.Module',{
                 .setWidth("18em")
                 .setLabelSize("8em")
                 .setLabelCaption("姓名")
+            );
+            
+            append(
+                xui.create("xui.UI.Panel")
+                .setHost(host,"xui_ui_panel5")
+                .setDock("none")
+                .setLeft("38.333333333333336em")
+                .setTop("4.166666666666667em")
+                .setWidth("23.333333333333332em")
+                .setHeight("22.5em")
+                .setCaption("注册通过")
+            );
+            
+            host.xui_ui_panel5.append(
+                xui.create("xui.UI.TreeGrid")
+                .setHost(host,"xui_ui_treegrid3")
+                .setDirtyMark(false)
+                .setLeft("0em")
+                .setTop("0em")
+                .setEditable(true)
+                .setRowHandler(false)
+                .setHeader([
+                    {
+                        "id":"name",
+                        "caption":"姓名",
+                        "type":"label",
+                        "width":"11em"
+                    },
+                    {
+                        "id":"age",
+                        "caption":"年龄",
+                        "type":"label",
+                        "width":"11em"
+                    }
+                ])
+            );
+            
+            append(
+                xui.create("xui.UI.Input")
+                .setHost(host,"input_name")
+                .setName("name")
+                .setDirtyMark(false)
+                .setLeft("35em")
+                .setTop("28.333333333333332em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("姓名")
+            );
+            
+            append(
+                xui.create("xui.UI.Input")
+                .setHost(host,"input_age")
+                .setName("age")
+                .setDirtyMark(false)
+                .setLeft("35em")
+                .setTop("30.833333333333332em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("年龄")
             );
             
             return children;
