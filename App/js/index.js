@@ -71,16 +71,7 @@ xui.Class('App', 'xui.Module',{
                         "type":"control",
                         "target":"panel_registe",
                         "args":[ ],
-                        "method":"formReset"
-                    },
-                    {
-                        "desc":"设置",
-                        "type":"control",
-                        "target":"panel_registe",
-                        "args":[
-                            "{page.panel_registe.getFormValues()}"
-                        ],
-                        "method":"setFormValues"
+                        "method":"formClear"
                     },
                     "_xui_ui_htmlbutton3_onclick"
                 ])
