@@ -191,9 +191,34 @@ xui.Class('App', 'xui.Module',{
                     }
                 ],
                 "actions":[
+                    {
+                        "desc":"input赋值1",
+                        "type":"control",
+                        "target":"input_name",
+                        "args":[
+                            "{page.input_name.setUIValue()}",
+                            undefined,
+                            undefined,
+                            "{args[0].name}"
+                        ],
+                        "method":"setUIValue",
+                        "redirection":"other:callback:call"
+                    },
+                    {
+                        "desc":"input赋值2",
+                        "type":"control",
+                        "target":"input_age",
+                        "args":[
+                            "{page.input_age.setUIValue()}",
+                            undefined,
+                            undefined,
+                            "{args[0].age}"
+                        ],
+                        "method":"setUIValue",
+                        "redirection":"other:callback:call"
+                    },
                     function(data){
                         console.log(data);
-                        return data;
                     }
                 ]
             }
