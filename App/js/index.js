@@ -120,6 +120,34 @@ xui.Class('App', 'xui.Module',{
                         "width":"11em"
                     }
                 ])
+                .afterRowActive([
+                    {
+                        "desc":"设置值1",
+                        "type":"control",
+                        "target":"input_name",
+                        "args":[
+                            "{page.input_name.setUIValue()}",
+                            undefined,
+                            undefined,
+                            "{args[1].name}"
+                        ],
+                        "method":"setUIValue",
+                        "redirection":"other:callback:call"
+                    },
+                    {
+                        "desc":"设置值2",
+                        "type":"control",
+                        "target":"input_age",
+                        "args":[
+                            "{page.input_age.setUIValue()}",
+                            undefined,
+                            undefined,
+                            "{args[1].age}"
+                        ],
+                        "method":"setUIValue",
+                        "redirection":"other:callback:call"
+                    }
+                ])
             );
             
             append(
