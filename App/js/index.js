@@ -24,7 +24,7 @@ xui.Class('App', 'xui.Module',{
                 xui.create("xui.UI.Panel")
                 .setHost(host,"panel_registe")
                 .setDock("none")
-                .setLeft("5.833333333333333em")
+                .setLeft("5em")
                 .setTop("4.166666666666667em")
                 .setWidth("25em")
                 .setHeight("22.5em")
@@ -71,7 +71,7 @@ xui.Class('App', 'xui.Module',{
                         "type":"control",
                         "target":"panel_registe",
                         "args":[ ],
-                        "method":"formReset"
+                        "method":"formClear"
                     },
                     "_xui_ui_htmlbutton3_onclick"
                 ])
