@@ -71,7 +71,7 @@ xui.Class('App', 'xui.Module',{
                         "type":"control",
                         "target":"panel_registe",
                         "args":[ ],
-                        "method":"formClear"
+                        "method":"formReset"
                     },
                     "_xui_ui_htmlbutton3_onclick"
                 ])
