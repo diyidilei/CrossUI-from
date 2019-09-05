@@ -247,6 +247,16 @@ xui.Class('App', 'xui.Module',{
                         ],
                         "method":"insertRows"
                     },
+                    {
+                        "desc":"激活行",
+                        "type":"control",
+                        "target":"xui_ui_treegrid3",
+                        "args":[
+                            "",
+                            "{args[0]}"
+                        ],
+                        "method":"setActiveRow"
+                    },
                     function(data){
                         console.log(data);
                     }
